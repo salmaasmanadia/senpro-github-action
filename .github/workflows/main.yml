@@ -43,14 +43,14 @@ jobs:
             echo "Cek folder project";
             [ ! -d "${HOME}/senpro/481008/modul02/senpro-github-action/" ] &&
             {
-                    echo "Repository belum di-clone. Cloning...";
-                    mkdir -p ~/senpro/481008/modul02;
-                    cd~/senpro/481008/modul02;
-                    git clone git@github.com:salmaasmanadia/senpro-github-action.git;
-            }       ||
+              echo "Repository belum di-clone. Cloning...";
+              mkdir -p ~/senpro/481008/modul02;
+              cd~/senpro/481008/modul02;
+              git clone git@github.com:salmaasmanadia/senpro-github-action.git;
+            } ||
             {
-                    echo "Repository sudah ada. Building...";
-                    cd ~/senpro/481008/modul02/senpro-github-action;
-                    git restore .;
-                    git pull origin main;
+              echo "Repository sudah ada. Building...";
+              cd ~/senpro/481008/modul02/senpro-github-action;
+              git restore .;
+              git pull origin main;
             }
