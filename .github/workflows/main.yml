@@ -29,13 +29,12 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-
     steps:
       - name: Build app on VM
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USERNAME}}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
